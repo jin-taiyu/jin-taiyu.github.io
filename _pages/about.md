@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "个人简介"
+title: "简介"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -24,3 +24,6 @@ redirect_from:
 研究领域
 ======
 人工智能、自然语言处理、量子计算与量子信息
+
+荣誉与获奖
+======
