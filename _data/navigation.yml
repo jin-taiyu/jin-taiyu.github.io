@@ -1,7 +1,7 @@
 # main links links
 main:
   - title: "主持项目"
-    url: /posts/
+    url: /talks/
 
   - title: "论文发表"
     url: /publications/
