@@ -17,7 +17,7 @@ type: "人工智能"
 - 可视化：以直观的方式展示分析结果。
 
 <center>
-<img src="/_talks/bert.png" alt="BERT">
+<img src="images/bert.png" alt="BERT">
 </center>
 
 应用价值与前景：
