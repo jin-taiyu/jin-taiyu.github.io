@@ -1,6 +1,7 @@
 ---
 title: "程序设计课程设计作业AnimalTrack"
 date: 2023-6-10
+collection: talks
 paperurl: 'http://jin-taiyu.github.io/files/程序设计课程设计.pdf'
 ---
 

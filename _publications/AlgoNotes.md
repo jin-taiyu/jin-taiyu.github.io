@@ -1,6 +1,6 @@
 ---
 title: "算法学习笔记AlgoNotes"
-date: 2024-1-27
+collection: talks
 ---
 
 算法竞赛学习中记录的笔记存放于此。
