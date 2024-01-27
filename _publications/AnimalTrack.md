@@ -1,11 +1,10 @@
 ---
-title: "程序设计课程设计作业AnimalTrack"
+title: "AnimalTrack校园动物管理系统"
 date: 2023-6-10
-collection: talks
 paperurl: 'http://jin-taiyu.github.io/files/程序设计课程设计报告.pdf'
 ---
 
-大一下学期“程序设计课程设计”结课作业校园动物管理系统。
+大一下学期程序设计课程设计中开发的“AnimalTrack校园动物管理系统”。本系统基于C语言，支持动物信息的增删查改，并采用文件存储以确保数据持久化。详细报告可通过以下链接获取：
 
 <p align="center">
   <img src="/images/animal-track-logo.png" alt="图片" />
