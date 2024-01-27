@@ -1,11 +1,13 @@
 ---
 title: "程序设计课程设计作业AnimalTrack"
+date: 2023-6-10
+paperurl: 'http://jin-taiyu.github.io/files/程序设计课程设计.pdf'
 ---
 
 大一下学期“程序设计课程设计”结课作业校园动物管理系统。
 
 <p align="center">
-  <img src="images/animal-track-logo.png" alt="图片" />
+  <img src="/images/animal-track-logo.png" alt="图片" />
 </p>
 
 ## 1. 系统背景
