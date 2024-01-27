@@ -1,8 +1,8 @@
 # main links links
 main:
-  - title: "主持项目"
+  - title: "参与项目"
     url: /talks/
 
-  - title: "论文发表"
+  - title: "资源共享"
     url: /publications/
 

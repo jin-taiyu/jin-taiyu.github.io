@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "论文发表"
+title: "资源共享"
 permalink: /publications/
 author_profile: true
 ---
