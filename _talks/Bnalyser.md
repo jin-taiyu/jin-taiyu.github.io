@@ -17,7 +17,7 @@ type: "人工智能"
 - 可视化：以直观的方式展示分析结果。
 
 <center>
-<img src="@images/bert.png" alt="BERT">
+<img src="bert.png" alt="BERT">
 </center>
 
 应用价值与前景：
@@ -33,3 +33,5 @@ type: "人工智能"
 - 支持不同操作系统，满足多设备需求。
 
 未来，我们将持续改进技术和拓展应用场景，以提供更优质的服务。
+
+[项目地址](https://github.com/jin-taiyu/Bnalyser.git)
