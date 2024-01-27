@@ -16,9 +16,7 @@ type: "人工智能"
 - 数据处理：自动抓取、分词、降噪和词嵌入，提供高质量的语料库。
 - 可视化：以直观的方式展示分析结果。
 
-<center>
-<img src="bert.png" alt="BERT">
-</center>
+![BERT](../images/bert.png)
 
 应用价值与前景：
 ---
