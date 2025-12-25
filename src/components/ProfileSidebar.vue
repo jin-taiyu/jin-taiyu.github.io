@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
-import { MapPin, Github, Mail } from 'lucide-vue-next'
+import { MapPin, Github, Mail, FileDown } from 'lucide-vue-next'
 </script>
 
 <template>
@@ -30,6 +30,10 @@ import { MapPin, Github, Mail } from 'lucide-vue-next'
       <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground">
         <Mail class="h-4 w-4" />
         <a href="mailto:taiyujin@outlook.com" class="hover:underline">taiyujin@outlook.com</a>
+      </div>
+      <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
+        <FileDown class="h-4 w-4" />
+        <a href="/resume.pdf" download class="hover:underline">简历 / Resume</a>
       </div>
     </div>
   </div>
