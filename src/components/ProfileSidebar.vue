@@ -34,6 +34,9 @@ const { t } = useI18n()
         <Mail class="h-4 w-4" />
         <a href="mailto:taiyujin@outlook.com" class="hover:underline">taiyujin@outlook.com</a>
       </div>
+
+      <Separator class="my-4" />
+      
       <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
         <FileDown class="h-4 w-4" />
         <a href="/resume.pdf" download class="hover:underline">{{ t('profile.resume') }}</a>
