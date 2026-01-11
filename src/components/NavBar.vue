@@ -1,6 +1,10 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { Button } from '@/components/ui/button'
 import { Github } from 'lucide-vue-next'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -9,16 +13,17 @@ import { Github } from 'lucide-vue-next'
       <div class="flex items-center gap-6">
         <a href="/" class="flex items-center gap-2">
           <span class="font-bold text-xl tracking-tight">
-            金太宇 / 主页
+            {{ t('nav.title') }}
           </span>
         </a>
       </div>
       
       <div class="flex items-center gap-2">
+        <LanguageSwitcher />
         <Button variant="ghost" size="icon" as-child>
           <a href="https://github.com/jin-taiyu" target="_blank" rel="noopener noreferrer">
             <Github class="h-5 w-5" />
-            <span class="sr-only">GitHub</span>
+            <span class="sr-only">{{ t('nav.github') }}</span>
           </a>
         </Button>
       </div>

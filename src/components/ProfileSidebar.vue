@@ -1,19 +1,22 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
 import { MapPin, Github, Mail, FileDown } from 'lucide-vue-next'
+
+const { t } = useI18n()
 </script>
 
 <template>
   <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
     <Avatar class="h-48 w-48 border-4 border-white ring-1 ring-gray-200">
-      <AvatarImage src="/profile.png" alt="Jin Taiyu" />
+      <AvatarImage src="/profile.png" :alt="t('profile.name')" />
       <AvatarFallback class="text-6xl bg-muted">JT</AvatarFallback>
     </Avatar>
     
     <div class="space-y-1">
-      <h1 class="text-xl font-bold">金太宇</h1>
-      <p class="text-sm text-muted-foreground">南京审计大学在读本科生</p>
+      <h1 class="text-xl font-bold">{{ t('profile.name') }}</h1>
+      <p class="text-sm text-muted-foreground">{{ t('profile.title') }}</p>
     </div>
 
     <Separator class="my-4" />
@@ -21,7 +24,7 @@ import { MapPin, Github, Mail, FileDown } from 'lucide-vue-next'
     <div class="space-y-3 text-sm w-full">
       <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground">
         <MapPin class="h-4 w-4" />
-        <span>中国·南京</span>
+        <span>{{ t('profile.location') }}</span>
       </div>
       <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
         <Github class="h-4 w-4" />
@@ -33,7 +36,7 @@ import { MapPin, Github, Mail, FileDown } from 'lucide-vue-next'
       </div>
       <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
         <FileDown class="h-4 w-4" />
-        <a href="/resume.pdf" download class="hover:underline">简历 / Resume</a>
+        <a href="/resume.pdf" download class="hover:underline">{{ t('profile.resume') }}</a>
       </div>
     </div>
   </div>
