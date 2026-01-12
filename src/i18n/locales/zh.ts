@@ -8,6 +8,12 @@ export default {
     title: '南京审计大学在读本科生',
     location: '中国·南京',
     resume: '下载简历',
+    sendEmail: '发送邮件',
+    downloadPdf: '下载 PDF',
+    githubProfile: 'GitHub 主页',
+    viewProjects: '查看项目和贡献',
+    viewOrcid: '查看 ORCID 主页',
+    viewScopus: '查看 Scopus 作者主页',
   },
   main: {
     about: {
@@ -21,6 +27,7 @@ export default {
     },
     publications: {
       title: '主要成果',
+      journalPapers: '期刊论文',
       copyright: '计算机软件著作权',
       copyrightOwner: '著作权人',
       textRelation: {
@@ -32,6 +39,9 @@ export default {
         id: '2024SR2206438',
       },
     },
+  },
+  footer: {
+    rights: '保留所有权利',
   },
   language: {
     switch: '切换语言',

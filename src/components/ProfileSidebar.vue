@@ -2,45 +2,131 @@
 import { useI18n } from 'vue-i18n'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Separator } from '@/components/ui/separator'
-import { MapPin, Github, Mail, FileDown } from 'lucide-vue-next'
+import { Card, CardContent } from '@/components/ui/card'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card'
+import { MapPin, Github, Mail } from 'lucide-vue-next'
 
 const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
-    <Avatar class="h-48 w-48 border-4 border-white ring-1 ring-gray-200">
-      <AvatarImage src="/profile.png" :alt="t('profile.name')" />
-      <AvatarFallback class="text-6xl bg-muted">JT</AvatarFallback>
-    </Avatar>
-    
-    <div class="space-y-1">
-      <h1 class="text-xl font-bold">{{ t('profile.name') }}</h1>
-      <p class="text-sm text-muted-foreground">{{ t('profile.title') }}</p>
-    </div>
+  <TooltipProvider>
+    <Card class="border-0 shadow-none md:sticky md:top-20">
+      <CardContent class="p-0 md:p-4">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4">
+          <div class="relative group">
+            <Avatar class="h-40 w-40 md:h-48 md:w-48 border-2 border-border shadow-md transition-transform duration-300 group-hover:scale-[1.02]">
+              <AvatarImage src="/profile.png" :alt="t('profile.name')" class="object-cover" />
+              <AvatarFallback class="text-5xl md:text-6xl bg-muted font-light">JT</AvatarFallback>
+            </Avatar>
+          </div>
 
-    <Separator class="my-4" />
+          <div class="space-y-1.5">
+            <h1 class="text-2xl font-bold tracking-tight">{{ t('profile.name') }}</h1>
+            <p class="text-sm text-muted-foreground font-medium">{{ t('profile.title') }}</p>
+          </div>
 
-    <div class="space-y-3 text-sm w-full">
-      <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground">
-        <MapPin class="h-4 w-4" />
-        <span>{{ t('profile.location') }}</span>
-      </div>
-      <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
-        <Github class="h-4 w-4" />
-        <a href="https://github.com/jin-taiyu" target="_blank" rel="noopener noreferrer">jin-taiyu</a>
-      </div>
-      <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground">
-        <Mail class="h-4 w-4" />
-        <a href="mailto:taiyujin@outlook.com" class="hover:underline">taiyujin@outlook.com</a>
-      </div>
+          <Separator class="my-2" />
 
-      <Separator class="my-4" />
-      
-      <div class="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors">
-        <FileDown class="h-4 w-4" />
-        <a href="/resume.pdf" download class="hover:underline">{{ t('profile.resume') }}</a>
-      </div>
-    </div>
-  </div>
+          <div class="space-y-1 text-sm w-full">
+            <div class="flex items-center justify-center md:justify-start gap-2.5 text-muted-foreground py-1.5 px-2 -mx-2 rounded-md hover:bg-muted/50 transition-colors cursor-default">
+              <MapPin class="h-4 w-4 flex-shrink-0" />
+              <span>{{ t('profile.location') }}</span>
+            </div>
+
+            <HoverCard>
+              <HoverCardTrigger as-child>
+                <a
+                  href="https://github.com/jin-taiyu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center md:justify-start gap-2.5 text-muted-foreground py-1.5 px-2 -mx-2 rounded-md hover:bg-muted/50 transition-colors"
+                >
+                  <Github class="h-4 w-4 flex-shrink-0" />
+                  <span>jin-taiyu</span>
+                </a>
+              </HoverCardTrigger>
+              <HoverCardContent class="w-72" side="right">
+                <div class="flex gap-4">
+                  <Avatar class="h-12 w-12">
+                    <AvatarImage src="https://github.com/jin-taiyu.png" />
+                    <AvatarFallback>JT</AvatarFallback>
+                  </Avatar>
+                  <div class="space-y-1">
+                    <h4 class="text-sm font-semibold">@jin-taiyu</h4>
+                    <p class="text-xs text-muted-foreground">
+                      {{ t('profile.githubProfile') }}
+                    </p>
+                    <div class="flex items-center pt-1">
+                      <span class="text-xs text-muted-foreground">
+                        {{ t('profile.viewProjects') }}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
+
+            <Tooltip>
+              <TooltipTrigger as-child>
+                <a
+                  href="mailto:taiyujin@outlook.com"
+                  class="flex items-center justify-center md:justify-start gap-2.5 text-muted-foreground py-1.5 px-2 -mx-2 rounded-md hover:bg-muted/50 transition-colors"
+                >
+                  <Mail class="h-4 w-4 flex-shrink-0" />
+                  <span>taiyujin@outlook.com</span>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side="right">
+                <p>{{ t('profile.sendEmail') }}</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger as-child>
+                <a
+                  href="https://orcid.org/0009-0000-0981-4076"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center md:justify-start gap-2.5 text-muted-foreground py-1.5 px-2 -mx-2 rounded-md hover:bg-muted/50 transition-colors"
+                >
+                  <svg class="h-4 w-4 flex-shrink-0" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16">
+                    <circle cx="128" cy="128" r="120" />
+                    <path d="M86 186V79M86 57a10 10 0 1 0 0-0.1" stroke-linecap="round" />
+                    <path d="M138 186V79h26c17 0 28 10 28 26s-11 26-28 26h-26" fill="none" />
+                  </svg>
+                  <span>0009-0000-0981-4076</span>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side="right">
+                <p>{{ t('profile.viewOrcid') }}</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger as-child>
+                <a
+                  href="https://www.scopus.com/authid/detail.uri?authorId=60212220900"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center justify-center md:justify-start gap-2.5 text-muted-foreground py-1.5 px-2 -mx-2 rounded-md hover:bg-muted/50 transition-colors"
+                >
+                  <svg class="h-4 w-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M8 12a4 4 0 1 0 4-4" />
+                    <path d="M16 8v8" />
+                  </svg>
+                  <span>60212220900</span>
+                </a>
+              </TooltipTrigger>
+              <TooltipContent side="right">
+                <p>{{ t('profile.viewScopus') }}</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  </TooltipProvider>
 </template>

@@ -8,6 +8,12 @@ export default {
     title: 'Undergraduate at Nanjing Audit University',
     location: 'Nanjing, China',
     resume: 'Download resume',
+    sendEmail: 'Send email',
+    downloadPdf: 'Download PDF',
+    githubProfile: 'GitHub Profile',
+    viewProjects: 'View projects and contributions',
+    viewOrcid: 'View ORCID profile',
+    viewScopus: 'View Scopus author profile',
   },
   main: {
     about: {
@@ -21,6 +27,7 @@ export default {
     },
     publications: {
       title: 'Main Achievements',
+      journalPapers: 'Journal Papers',
       copyright: 'Software Copyright',
       copyrightOwner: 'Copyright Owner',
       textRelation: {
@@ -32,6 +39,9 @@ export default {
         id: '2024SR2206438',
       },
     },
+  },
+  footer: {
+    rights: 'All rights reserved',
   },
   language: {
     switch: 'Switch Language',
