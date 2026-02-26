@@ -12,9 +12,9 @@ const { t } = useI18n()
   <div class="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
     <section id="about" class="space-y-4 scroll-mt-16">
       <h2 class="text-2xl font-bold tracking-tight">{{ t('main.about.title') }}</h2>
-      <p class="text-muted-foreground leading-7">
-        {{ t('main.about.content') }}
-      </p>
+      <i18n-t keypath="main.about.content" tag="p" class="text-muted-foreground leading-7">
+        <em>Neurocomputing</em>
+      </i18n-t>
     </section>
 
     <Separator />
