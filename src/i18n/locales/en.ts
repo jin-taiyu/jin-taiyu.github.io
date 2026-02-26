@@ -18,7 +18,7 @@ export default {
   main: {
     about: {
       title: 'About',
-      content: 'Taiyu Jin, member of the Communist Party of China, member of the Chinese Computer Federation (CCF), currently an undergraduate student majoring in Computer Science and Technology at Nanjing Audit University, with a GPA of 4.16/5.0. During undergraduate studies, published one SCI paper (JCR Q1) as the first author and obtained two software copyrights. Main research interests include data analysis and machine learning.',
+      content: 'Jin Taiyu, member of the Communist Party of China (CPC), member of the China Computer Federation (CCF), undergraduate student majoring in Computer Science and Technology at Nanjing Audit University, with a GPA of 4.16/5.0. Primarily engaged in research in the fields of machine learning and data analysis. During the undergraduate period, published one SCI paper as the first author (JCR Q1), obtained two software copyrights, and was invited to serve as a reviewer for the international journal {0}.',
     },
     research: {
       title: 'Research Interests',
