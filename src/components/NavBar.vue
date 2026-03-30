@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -6,7 +7,10 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { Github, FileDown } from 'lucide-vue-next'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
+
+const resumeHref = computed(() => (locale.value === 'zh' ? '/resume-zh.pdf' : '/resume-en.pdf'))
+const resumeFilename = computed(() => (locale.value === 'zh' ? 'resume-zh.pdf' : 'resume-en.pdf'))
 </script>
 
 <template>
@@ -25,7 +29,7 @@ const { t } = useI18n()
           <Tooltip>
             <TooltipTrigger as-child>
               <Button variant="ghost" size="icon" class="h-9 w-9" as-child>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a :href="resumeHref" :download="resumeFilename">
                   <FileDown class="h-5 w-5" />
                   <span class="sr-only">{{ t('profile.resume') }}</span>
                 </a>
