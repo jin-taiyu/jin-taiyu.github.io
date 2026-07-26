@@ -5,8 +5,8 @@ export default {
   },
   profile: {
     name: 'Taiyu Jin',
-    title: 'Undergraduate at Nanjing Audit University',
-    location: 'Nanjing, China',
+    title: "Master's Student at Anhui University",
+    location: 'Hefei, China',
     resume: 'Download resume',
     sendEmail: 'Send email',
     downloadPdf: 'Download PDF',
@@ -18,7 +18,7 @@ export default {
   main: {
     about: {
       title: 'About',
-      content: 'Computer Science and Technology undergraduate at Nanjing Audit University, ranked first in the major with a GPA of 4.16/5.0. Research interests center on machine learning and data analytics, with one first-author SCI article (JCR Q1), two software copyright registrations, and reviewing experience for the journal {0}. Member of CCF and IEEE.',
+      content: "Master's student at Anhui University. Research focuses on machine learning and data analytics. Authored one first-author SCI paper (JCR Q1), holds two software copyrights, and serves as a reviewer for the journal {0}. Member of CCF and IEEE.",
     },
     research: {
       title: 'Research Interests',

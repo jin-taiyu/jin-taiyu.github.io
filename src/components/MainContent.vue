@@ -45,7 +45,7 @@ const { t } = useI18n()
                 <Badge variant="default">SCI</Badge>
                 <Badge variant="default">JCR Q1</Badge>
               </div>
-              <CardTitle class="text-lg leading-relaxed">
+              <CardTitle class="text-base leading-relaxed">
                 <a
                   href="https://doi.org/10.1016/j.neucom.2025.132200"
                   target="_blank"
@@ -56,7 +56,7 @@ const { t } = useI18n()
                   <ExternalLink class="h-4 w-4 flex-shrink-0 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </CardTitle>
-              <CardDescription class="text-sm">
+              <CardDescription class="text-xs">
                 Neurocomputing 665C (2026) 132200
               </CardDescription>
             </CardHeader>
