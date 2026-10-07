@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import { Github, FileDown } from 'lucide-vue-next'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue'
 
 const { t, locale } = useI18n()
 
@@ -19,13 +20,13 @@ const resumeFilename = computed(() => (locale.value === 'zh' ? 'resume-zh.pdf' :
       <div class="container flex h-16 items-center justify-between">
         <div class="flex items-center gap-6">
           <a href="/" class="flex items-center gap-2 group">
-            <span class="font-bold text-xl tracking-tight transition-colors group-hover:text-primary">
+            <span class="font-bold text-lg sm:text-xl tracking-tight transition-colors group-hover:text-primary">
               {{ t('nav.title') }}
             </span>
           </a>
         </div>
 
-        <div class="flex items-center gap-1">
+        <div class="flex shrink-0 items-center gap-1">
           <Tooltip>
             <TooltipTrigger as-child>
               <Button variant="ghost" size="icon" class="h-9 w-9" as-child>
@@ -41,6 +42,7 @@ const resumeFilename = computed(() => (locale.value === 'zh' ? 'resume-zh.pdf' :
           </Tooltip>
 
           <LanguageSwitcher />
+          <ThemeSwitcher />
 
           <Separator orientation="vertical" class="mx-2 h-6" />
 

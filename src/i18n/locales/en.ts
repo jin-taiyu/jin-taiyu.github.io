@@ -48,4 +48,11 @@ export default {
     zh: '中文',
     en: 'English',
   },
+  theme: {
+    label: 'Theme',
+    switch: 'Change theme (current: {mode})',
+    light: 'Light',
+    dark: 'Dark',
+    auto: 'System',
+  },
 }

@@ -48,4 +48,11 @@ export default {
     zh: '中文',
     en: 'English',
   },
+  theme: {
+    label: '主题',
+    switch: '切换主题（当前：{mode}）',
+    light: '浅色',
+    dark: '深色',
+    auto: '跟随系统',
+  },
 }
